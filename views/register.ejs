@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="resources/css/register.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="label">Crear cuenta</h1>
+      <form action="/register" class="login_form" method="POST" name="form" id="formulario" >
+        <!-- Grupo: Usuario -->
+        <div class="font" id="grupo__name">Usuario</div>
+        <div class="container-input">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            
+            onChange="validation(event)"
+          />
+          <i id="icon__name__error" class="floating-button fas fa-times-circle"></i>
+          <i id="icon__name__correct" class="floating-button fas fa-check-circle" ></i>
+          <!-- class="formulario__validacion-estado  " -->
+        </div>
+
+        <p class="formulario__input-error" id="ErrorP">
+          El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+          numeros, letras y guion bajo.
+        </p>
+
+        <!-- Grupo: Email -->
+        <div class="font font2" id="grupo__email">Correo electronico</div>
+        <div class="container-input">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            required
+            onChange="validation(event)"
+          />
+          <i class="floating-button fas fa-times-circle"></i>
+          <i id="icon__name__correct" class="floating-button fas fa-check-circle" ></i>
+        </div>
+        <p class="formulario__input-error">
+          El correo solo puede contener letras, numeros, puntos, guiones y guion
+          bajo.
+        </p>
+
+        <!-- Grupo: Contraseña -->
+        <div class="font font3" id="grupo__password">Contraseña</div>
+        <div class="container-input">
+          <input type="password" name="password" id="password" required /
+          onChange="validation(event)" />
+          <i id="icon__password__error" class="floating-button fas fa-times-circle"></i>
+          <i id="icon__password__correct" class="floating-button fas fa-check-circle" ></i>
+        </div>
+        <p class="formulario__input-error">
+          La contraseña tiene que ser de 4 a 12 dígitos.
+        </p>
+
+        <!-- Grupo: Contraseña 2 -->
+        <!-- <div class="font font4" id="grupo__password2">Ingrese nuevamente su contraseña</div>
+        <div class="container-input">
+          <input
+            type="password"
+            name="password2"
+            id="password2"
+            required
+            onChange="validation(event)"
+          />
+          <i id="icon__password2__error" class="floating-button fas fa-times-circle"></i>
+          <i id="icon__password2__correct" class="floating-button fas fa-check-circle" ></i>
+        </div>
+        <p class="formulario__input-error">
+          Ambas contraseñas deben ser iguales.
+        </p> -->
+        <br />
+        <button onclick="validar();" id="login" type="submit">Continuar</button>
+      </form>
+      <h1 class="label2">
+        Al crear una cuenta, aceptas las
+        <a href="”CondicionesUso.html”" target="”_blank”">Condiciones de Uso</a>
+        y
+        <a href="”AvisoPrivacidad.html”" target="”_blank”"
+          >Aviso de privdacidad.</a
+        >
+      </h1>
+      <h1 class="label3">
+        ¿Ya tienes una cuenta?
+        <a href="login" target="_blank">Iniciar Sesion</a>
+      </h1>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined"){ %>
+      <script>
+        Swal.fire({
+            title: '<%= alertTitle %>',
+            text:'<%= alertMessage %>',
+            icon: '<%= alertIcon %>',
+            showConfirmButton:<%= showConfirmButton %>,
+            timer:<%= timer %>
+          }).then(()=>{
+          window.location= '/<%= ruta %>'
+        })
+
+      </script>
+    <% } %>
+  
+  </body>
+</html>

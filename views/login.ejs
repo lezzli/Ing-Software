@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="resources/css/StyleLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="label">Iniciar Sesion</h1>
+        <form class="Sign_form" method="POST" action="/auth" name="form">
+<div class="font">Email</div>
+<input type="text" name="email"  >
+<div class="font font2">Contraseña</div>
+<input type="password" name="password"  >
+<br>
+<button class="btn1" type="submit">Ingresar</button>
+
+</form>
+<a href="register">
+    <button class="btn" type="submit">Registrarse</button>
+</a>
+
+</div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(typeof alert != "undefined"){ %>
+      <script>
+        Swal.fire({
+            title: '<%= alertTitle %>',
+            text:'<%= alertMessage %>',
+            icon: '<%= alertIcon %>',
+            showConfirmButton:<%= showConfirmButton %>,
+            timer:<%= timer %>
+          }).then(()=>{
+          window.location= '/<%= ruta %>'
+        })
+
+      </script>
+    <% } %>
+</body>
+</html>

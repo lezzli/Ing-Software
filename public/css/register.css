@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+}
+.container{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin-top: 100px;
+    width: 362px;
+    height: 512px;
+    background:white;
+    border: 1px solid rgb(107, 104, 104);
+    border-radius: 5px;
+}
+.label{
+    padding: 20px 37px;
+    font-size: 27px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.login_form{
+    padding: 0px 40px;
+    
+}
+.login_form .font{
+    font-size: 16px;
+    color: black;
+    margin: 5px 0;
+    font-family: bold;
+}
+
+.login_form input{
+    height: 30px;
+    width: 273px;
+    padding: 0 5px;
+    font-size: 16px; 
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid black;
+    transition: .3s ease all;
+}
+
+.login_form .font2{
+    margin-top: 10px;
+}
+
+.login_form .font3{
+    margin-top: 10px;
+}
+
+.login_form .font4{
+    margin-top: 10px;
+}
+
+.login_form button{
+    margin: 21px 79px;
+    height: 44px;
+    width: 116px;
+    font-size: 21px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background:#2E86C1 ;
+    border-radius: 16px;
+    border: 1px solid #2E86C1;
+    transition: .5s;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.login_form input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.container-input {
+    position: relative;
+}
+
+.floating-button {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    opacity: 0;
+}
+
+.login_form button:hover{
+    background:  #2874A6 ;
+}
+.label2{
+    padding: 3px 37px;
+    font-size: 12px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.label3{
+    padding: 3px 37px;
+    font-size: 12px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+  
+}
+
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+
+.input-correcto {
+    color: #1ed12d;
+    border: 1px #1ed12d solid !important;
+}
+
+.input-error {
+    color: #bb2929;
+    border: 1px #bb2929 solid !important;
+}
+
+.label-correcto {
+    color: #1ed12d;
+}
+
+.label-error {
+    color: #bb2929;
+}
+
+.font-incorrecto .container-input .floating-button {
+	color: #bb2929;
+	opacity: 1;
+}

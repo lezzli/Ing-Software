@@ -1,0 +1,30 @@
+body{
+    background-color: #f0f5e9;
+}
+.btn{
+    margin: 12px 100px;
+    height: 44px;
+    width: 116px;
+    font-size: 21px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #2E86C1;
+    border-radius: 3px;
+    border: 1px solid #2E86C1;
+    transition: .5s;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.btn:hover{
+    background:  #12344b ;
+}
+.btn1{
+    margin: 12px 100px;
+    height: 52px;
+    width: 116px;
+    font-size: 21px;
+    
+}
+
